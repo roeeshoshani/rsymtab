@@ -20,6 +20,14 @@
 //! #[rsymtab::export]
 //! static mut FOO: u32 = 5;
 //! ```
+//!
+//! # Portability
+//!
+//! **NOTE: this crate currently only works on linux.**
+//!
+//! that is because it uses a linker script to achieve some of the magic of creating the symbol table.
+//! additionally, only linkers which support specification of multiple linker scripts are supported, because otherwise this crate
+//! will overwrite the default linker script.
 
 #![no_std]
 
