@@ -1,0 +1,4 @@
+SECTIONS
+{
+	rsymtab : { KEEP(*(rsymtab.*)) }
+}
