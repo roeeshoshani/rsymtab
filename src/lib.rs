@@ -1,3 +1,26 @@
+//! this is a crate for generating a list of exported symbols, similar to how the `ksymtab` works in the linux kernel, but for
+//! rust crates.
+//!
+//! the basic idea is that you can export items by adding an `#[export]` attribute on them, and then you can access
+//! all the exported symbols by calling the [`symbols`] function.
+//!
+//! # Example
+//!
+//! ```
+//! fn main() {
+//!     println!("{:?}", rsymtab::symbols());
+//! }
+//!
+//! #[rsymtab::export]
+//! fn foo() {}
+//!
+//! #[rsymtab::export]
+//! fn bar() {}
+//!
+//! #[rsymtab::export]
+//! static mut FOO: u32 = 5;
+//! ```
+
 #![no_std]
 
 pub use rsymtab_macros::export;

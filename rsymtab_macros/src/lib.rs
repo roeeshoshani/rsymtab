@@ -1,6 +1,15 @@
-use quote::{format_ident, quote, quote_spanned, spanned::Spanned, ToTokens};
+use quote::{format_ident, quote, ToTokens};
 use syn::parse_macro_input;
 
+/// a macro which is used to export items to the list of exported symbols.
+/// this can only be used on functions and static variables.
+///
+/// # Example
+///
+/// ```
+/// #[export]
+/// fn foo() {}
+/// ```
 #[proc_macro_attribute]
 pub fn export(
     attribute_tokens: proc_macro::TokenStream,
