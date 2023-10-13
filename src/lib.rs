@@ -1,4 +1,4 @@
-// #![no_std]
+#![no_std]
 
 pub use rsymtab_macros::export;
 
@@ -67,12 +67,12 @@ impl SymbolAddress {
     }
 }
 impl core::fmt::Debug for SymbolAddress {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "0x{:x}", self.as_usize())
     }
 }
 impl core::fmt::Display for SymbolAddress {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
         write!(f, "0x{:x}", self.as_usize())
     }
 }
