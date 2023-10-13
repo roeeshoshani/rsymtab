@@ -2,6 +2,12 @@
 name = "rsymtab_macros"
 version = "0.1.0"
 edition = "2021"
+authors = ["Roee Shoshani"]
+description = "generation of an exported symbol table like ksymtab for rust crates"
+repository = "https://github.com/roeeshoshani/rsymtab"
+license = "MIT"
+keywords = ["ksymtab", "symbol", "table", "kernel", "generation"]
+categories = ["embedded", "accessibility", "no-std", "config"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
